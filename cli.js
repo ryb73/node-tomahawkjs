@@ -7,7 +7,7 @@ var failOn = require('./lib/cli/utils.js').failOn;
 var args = process.argv.slice(2);
 
 // The first argument is the command.
-failOn(args.length == 0, "You need to specify the command that shall be executed.");
+failOn(args.length === 0, "You need to specify the command that shall be executed.");
 
 // Check if we have a matching command defined.
 failOn(!commands.hasOwnProperty(args[0]), "The specified command is unknown.");
